@@ -11,7 +11,7 @@ const EditIngredients = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/get', {
+        const response = await axios.get('http://210.109.52.15:80/get', {
           withCredentials: true,
         });
         const data = response.data;
@@ -76,7 +76,7 @@ const EditIngredients = () => {
 
   const handleRemoveIngredient = (id) => {
     axios
-      .get(`http://127.0.0.1:5000/delete?id=${id}`, {
+      .get(`http://210.109.52.15:80/delete?id=${id}`, {
         withCredentials: true,
       })
       .then(() => {
@@ -104,7 +104,7 @@ const EditIngredients = () => {
     }));
 
     axios
-      .post('http://127.0.0.1:5000/modify', modifiedIngredients, {
+      .post('http://210.109.52.15:80/modify', modifiedIngredients, {
         withCredentials: true,
       })
       .then((response) => {

@@ -8,7 +8,7 @@ const ShowRecipes = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/search/5', {
+        const response = await axios.get('http://210.109.52.15:80/search/5', {
           withCredentials: true,
         });
         setRecipes(response.data);
