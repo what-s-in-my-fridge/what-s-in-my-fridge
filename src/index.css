@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Jua-font {
+  font-family: 'Jua';
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #d1dcff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+}
+
+input[type='checkbox']:checked ~ .slide-menu {
+  left: 0;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.custom-hr {
+  border: 0;
+  height: 4px;
+  background-color: #13438c;
+  margin: 20px 0;
+}
+.custom-hr-Community {
+  border: 0;
+  height: 4px;
+  background-color: #13438c;
+  margin: 5px 0;
+}
+.custom-hr-EditIngredients {
+  border: 0;
+  height: 4px;
+  background-color: #13438c;
+  margin-top: 20px;
+}

@@ -1,0 +1,10 @@
+export { default as Home } from "./Home";
+export { default as MyFridge } from "./MyFridge";
+export { default as ShowRecipes } from "./ShowRecipes";
+export { default as Community } from "./Community";
+export { default as AddIngredients } from "./AddIngredients";
+export { default as EditIngredients } from "./EditIngredients";
+export { default as SignIn } from "./SignIn";
+export { default as SignUp } from "./SignUp";
+export { default as Post } from "./Post";
+export { default as Write } from "./Write";
