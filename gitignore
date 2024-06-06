@@ -1,0 +1,7 @@
+
+embedded-database/
+instance/
+.env
+recipes.pkl
+
+
