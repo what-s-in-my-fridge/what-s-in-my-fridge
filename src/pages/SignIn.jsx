@@ -22,7 +22,7 @@ const SignIn = () => {
       password: password,
     };
     axios
-      .post('http://210.109.52.15:80/login', signinData, {
+      .post('/login', signinData, {
         withCredentials: true,
       })
       .then((response) => {

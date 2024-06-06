@@ -17,7 +17,7 @@ const Write = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://210.109.52.15:80/myinfo');
+        const response = await axios.get('/myinfo');
         const { nickname } = response.data;
         setNickname(nickname);
         setLoading(false);
@@ -34,7 +34,7 @@ const Write = () => {
     if (isEditMode && id) {
       const fetchPostData = async () => {
         try {
-          const response = await axios.get(`http://210.109.52.15:80/post/${id}`);
+          const response = await axios.get(`/post/${id}`);
           const { title, contents, nickname, image } = response.data;
           setTitle(title);
           setContents(contents);
@@ -82,13 +82,13 @@ const Write = () => {
           }
 
           // 글 수정 요청 처리
-          axios.put(`http://210.109.52.15:80/post/${id}`, formData, {
+          axios.put(`/post/${id}`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data', // 이미지 업로드를 위한 헤더 설정
             },
           });
           alert('글이 성공적으로 수정되었습니다.');
-          navigate(`http://210.109.52.15:80/post/${id}`);
+          navigate(`/post/${id}`);
         }
       } else {
         const shouldSubmit = window.confirm('작성하시겠습니까?');
@@ -101,7 +101,7 @@ const Write = () => {
           }
 
           // 글 작성 요청 처리
-          await axios.post('http://210.109.52.15:80/post/add', formData, {
+          await axios.post('/post/add', formData, {
             headers: {
               'Content-Type': 'multipart/form-data', // 이미지 업로드를 위한 헤더 설정
             },
@@ -115,7 +115,7 @@ const Write = () => {
     } catch (error) {
       alert('글 저장에 실패했습니다..');
       if (isEditMode) {
-        navigate(`http://210.109.52.15:80/post/${id}`);
+        navigate(`/post/${id}`);
       } else {
         navigate('/Community');
       }

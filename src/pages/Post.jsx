@@ -12,7 +12,7 @@ const Post = () => {
     const fetchPost = async () => {
       try {
         const fetchedData = await axios.get(
-          `http://210.109.52.15:80/post_/${id}`
+          `/post_/${id}`
         );
         setPost(fetchedData.data);
       } catch (error) {

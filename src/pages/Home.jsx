@@ -10,7 +10,7 @@ const Home = () => {
   const fetchNickname = async () => {
     try {
       setNickname('no_nickname');
-      const response = await axios.get('http://210.109.52.15:80/myinfo', {
+      const response = await axios.get('/myinfo', {
         withCredentials: true,
       });
       if (response.data === '로그인 해주세요!') {
@@ -26,7 +26,7 @@ const Home = () => {
 
   const logout = async () => {
     try {
-      await axios.get('http://210.109.52.15:80/logout', {
+      await axios.get('/logout', {
         withCredentials: true,
       });
       setNickname('no_nickname');

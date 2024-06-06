@@ -62,7 +62,7 @@ const AddIngredients = () => {
     }));
     console.log(selectedData);
     axios
-      .post("http://210.109.52.15:80/add", selectedData, {
+      .post("/add", selectedData, {
         withCredentials: true,
       })
       .then((response) => {

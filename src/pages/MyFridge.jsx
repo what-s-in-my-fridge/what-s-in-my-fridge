@@ -8,7 +8,7 @@ const MyFridge = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://210.109.52.15:80/get", {
+      const response = await axios.get("/get", {
         withCredentials: true,
       });
       if (response.data === "로그인해주세요!") {

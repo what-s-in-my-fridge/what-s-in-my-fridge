@@ -31,7 +31,7 @@ const SignUp = () => {
     else {
       const signupData = { id: id, nickname: nickname, password: password };
       axios
-        .post('http://210.109.52.15:80/signup', signupData, {
+        .post('/signup', signupData, {
           withCredentials: true,
         })
         .then((response) => {
